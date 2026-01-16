@@ -2,7 +2,7 @@ name: Hello World Workflow
 
 on:
   repository_dispatch:
-    types: [hello-world-trigger]
+    types: ["hello-world-trigger"]
 
 jobs:
   hello:
