@@ -1,11 +1,17 @@
 name: Hello World Workflow
 
 on:
-  workflow_call:  # <- allows other workflows to call this
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
 
 jobs:
   hello-world-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello World
-        run: echo "Hello World"
+        run: |
+          echo "Hello World"
+          echo "Running in environment: ${{ inputs.environment }}"
