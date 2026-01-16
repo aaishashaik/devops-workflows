@@ -1,4 +1,4 @@
-name: Reusable DevOps Workflow
+name: Hello World Workflow
 
 on:
   workflow_call:
@@ -11,5 +11,7 @@ jobs:
   hello-world-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print environment
-        run: echo "Running in ${{ inputs.environment }} environment"
+      - name: Print Hello World
+        run: |
+          echo "Hello World"
+          echo "Running in environment: ${{ inputs.environment }}"
